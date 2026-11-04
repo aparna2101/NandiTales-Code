@@ -4,6 +4,7 @@ import {
   Sparkles, CheckCircle2, Heart 
 } from 'lucide-react';
 import './about.css';
+import aboutBannerImg from '../assets/aboutbanner.png';
 import sunriseVideo from '../assets/cinematicvideo2.mp4';
 import craftVideo from '../assets/cinematicvideo1.mp4';
 import manufacturingVideo from '../assets/manufacturingproductvideo.mp4';
@@ -30,17 +31,13 @@ export default function AboutPage({ onNavigateHome, onExploreOfferings }) {
           1. ROOTED IN KASHI: THE STORY OF NANDI TALES
           ================================================================= */}
       <section className="nt-story-intro-section">
-        {/* Heritage Kashi Living Sunrise Video Background */}
+        {/* Heritage Kashi Living Banner Image (aboutbanner.png) */}
         <div className="story-intro-bg-wrap" aria-hidden="true">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="story-intro-bg-video"
-          >
-            <source src={sunriseVideo} type="video/mp4" />
-          </video>
+          <img
+            src={aboutBannerImg}
+            alt="The Story of Nandi Tales Varanasi Heritage"
+            className="story-intro-bg-img"
+          />
           <div className="story-intro-bg-overlay" />
         </div>
 

@@ -19,7 +19,7 @@ import sarnathBackImg from '../assets/sarnathback.png';
 import fullSarnathImg from '../assets/fullsarnathproduct.png';
 import diyaSetImg from '../assets/diyasetproduct.png';
 import allProductsImg from '../assets/allproduct.png';
-import shopBg from '../assets/shopbg.png';
+import shopBg from '../assets/shoppagebg.png';
 
 // Import authentic Ganga Jal assets
 import gangajal500Img from '../assets/product500ml.png';

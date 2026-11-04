@@ -349,6 +349,29 @@ body {
   color: #C59B27;
 }
 
+/* Sacred Audio toggle row inside mobile drawer */
+.drawer-audio-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  color: #08241D;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  border-top: 1px solid rgba(214, 154, 66, 0.25);
+  width: 100%;
+  text-align: left;
+}
+.drawer-audio-btn.playing {
+  color: #C59B27;
+}
+
 /* ==========================================================================
    3. HERO SLIDER BANNER (HOMEPAGEBANNER0 & HOMEPAGEBANNER1)
    ========================================================================== */
@@ -449,7 +472,7 @@ body {
   color: #04221A;
   font-weight: 600;
   /* Double text / Layered outline contrast effect against dawn sky */
-  text-shadow: 
+  text-shadow:
     0 1.5px 0 rgba(255, 255, 255, 0.95),
     0 -1.5px 0 rgba(255, 255, 255, 0.95),
     1.5px 0 0 rgba(255, 255, 255, 0.95),
@@ -464,7 +487,7 @@ body {
   display: inline-block;
   /* Editorial subtle highlighter underline glow */
   background: linear-gradient(180deg, transparent 72%, rgba(214, 154, 66, 0.32) 72%, rgba(214, 154, 66, 0.32) 94%, transparent 94%);
-  text-shadow: 
+  text-shadow:
     0 1.5px 0 rgba(255, 255, 255, 0.95),
     0 -1.5px 0 rgba(255, 255, 255, 0.95),
     1.5px 0 0 rgba(255, 255, 255, 0.95),
@@ -475,7 +498,7 @@ body {
 .hero-text-block.slide-1 .hero-description {
   color: #07261E;
   font-weight: 600;
-  text-shadow: 
+  text-shadow:
     0 1px 1px rgba(255, 255, 255, 0.95),
     0 2px 10px rgba(255, 248, 235, 0.9);
 }
@@ -498,6 +521,9 @@ body {
   color: #08281F;
   margin-bottom: 22px;
   letter-spacing: -0.015em;
+  text-shadow: 
+    0 1px 2px rgba(255, 255, 255, 0.9),
+    0 2px 12px rgba(255, 246, 230, 0.85);
 }
 
 .hero-heading-line {
@@ -1598,12 +1624,10 @@ body {
 .featured-ghats-wash {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse at 50% 35%,
-    rgba(250, 246, 238, 0.5) 0%,
-    rgba(250, 246, 238, 0.2) 60%,
-    transparent 100%
-  );
+  background: radial-gradient(ellipse at 50% 35%,
+      rgba(250, 246, 238, 0.5) 0%,
+      rgba(250, 246, 238, 0.2) 60%,
+      transparent 100%);
 }
 
 .featured-living-canvas {
@@ -1675,12 +1699,15 @@ body {
     transform: translateY(0) rotate(0deg) translateX(0);
     opacity: 0;
   }
+
   12% {
     opacity: 0.85;
   }
+
   85% {
     opacity: 0.75;
   }
+
   100% {
     transform: translateY(820px) rotate(360deg) translateX(45px);
     opacity: 0;
@@ -1984,13 +2011,11 @@ body {
 
 .card-living-diya.diya-p2-flame .card-diya-flame-body {
   border-radius: 50% 50% 20% 20% / 75% 75% 25% 25%;
-  background: linear-gradient(
-    to top,
-    rgba(255, 60, 0, 0.4) 0%,
-    rgba(255, 140, 0, 0.75) 30%,
-    rgba(255, 210, 50, 0.9) 65%,
-    rgba(255, 255, 230, 0.95) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(255, 60, 0, 0.4) 0%,
+      rgba(255, 140, 0, 0.75) 30%,
+      rgba(255, 210, 50, 0.9) 65%,
+      rgba(255, 255, 230, 0.95) 100%);
   box-shadow: 0 0 12px rgba(255, 160, 20, 0.8), 0 0 24px rgba(255, 100, 0, 0.4);
   filter: blur(0.4px);
   animation-duration: 1.45s;
@@ -2012,12 +2037,10 @@ body {
 
 .card-living-diya.diya-p2-flame .card-diya-halo {
   inset: -22px -16px;
-  background: radial-gradient(
-    ellipse at 50% 70%,
-    rgba(255, 190, 50, 0.7) 0%,
-    rgba(255, 110, 0, 0.25) 50%,
-    transparent 75%
-  );
+  background: radial-gradient(ellipse at 50% 70%,
+      rgba(255, 190, 50, 0.7) 0%,
+      rgba(255, 110, 0, 0.25) 50%,
+      transparent 75%);
 }
 
 /* Diya P3 Slender Lotus Flames for Poojan Box */
@@ -2042,13 +2065,11 @@ body {
 
 .card-living-diya.diya-p3-flame .card-diya-flame-body {
   border-radius: 50% 50% 20% 20% / 75% 75% 25% 25%;
-  background: linear-gradient(
-    to top,
-    rgba(255, 60, 0, 0.25) 0%,
-    rgba(255, 140, 0, 0.6) 35%,
-    rgba(255, 210, 50, 0.8) 70%,
-    rgba(255, 255, 230, 0.9) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(255, 60, 0, 0.25) 0%,
+      rgba(255, 140, 0, 0.6) 35%,
+      rgba(255, 210, 50, 0.8) 70%,
+      rgba(255, 255, 230, 0.9) 100%);
   box-shadow: 0 0 8px rgba(255, 160, 20, 0.6), 0 0 16px rgba(255, 100, 0, 0.25);
   filter: blur(0.3px);
   mix-blend-mode: screen;
@@ -2086,12 +2107,10 @@ body {
 
 .card-living-diya.diya-p3-flame .card-diya-halo {
   inset: -12px -8px;
-  background: radial-gradient(
-    ellipse at 50% 70%,
-    rgba(255, 180, 50, 0.5) 0%,
-    rgba(255, 100, 0, 0.15) 50%,
-    transparent 75%
-  );
+  background: radial-gradient(ellipse at 50% 70%,
+      rgba(255, 180, 50, 0.5) 0%,
+      rgba(255, 100, 0, 0.15) 50%,
+      transparent 75%);
   mix-blend-mode: screen;
 }
 
@@ -2157,13 +2176,11 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50% 50% 20% 20% / 75% 75% 25% 25%;
-  background: linear-gradient(
-    to top,
-    rgba(255, 80, 0, 0.35) 0%,
-    rgba(255, 160, 20, 0.7) 40%,
-    rgba(255, 220, 80, 0.85) 75%,
-    #FFFCE0 100%
-  );
+  background: linear-gradient(to top,
+      rgba(255, 80, 0, 0.35) 0%,
+      rgba(255, 160, 20, 0.7) 40%,
+      rgba(255, 220, 80, 0.85) 75%,
+      #FFFCE0 100%);
   box-shadow: 0 0 5px rgba(255, 170, 20, 0.8), 0 0 10px rgba(255, 100, 0, 0.3);
   mix-blend-mode: screen;
   filter: blur(0.25px);
@@ -2173,12 +2190,10 @@ body {
 .deepdaan-flame-halo {
   position: absolute;
   inset: -6px -5px;
-  background: radial-gradient(
-    ellipse at 50% 70%,
-    rgba(255, 190, 50, 0.5) 0%,
-    rgba(255, 100, 0, 0.12) 50%,
-    transparent 75%
-  );
+  background: radial-gradient(ellipse at 50% 70%,
+      rgba(255, 190, 50, 0.5) 0%,
+      rgba(255, 100, 0, 0.12) 50%,
+      transparent 75%);
   border-radius: 50%;
   mix-blend-mode: screen;
   animation: diyaHaloPulse 2s ease-in-out infinite alternate;
@@ -2192,12 +2207,10 @@ body {
   transform: translateX(-50%);
   width: 12px;
   height: 5px;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(255, 200, 60, 0.6) 0%,
-    rgba(255, 140, 0, 0.2) 50%,
-    transparent 75%
-  );
+  background: radial-gradient(ellipse at 50% 50%,
+      rgba(255, 200, 60, 0.6) 0%,
+      rgba(255, 140, 0, 0.2) 50%,
+      transparent 75%);
   border-radius: 50%;
   mix-blend-mode: screen;
   filter: blur(0.4px);
@@ -2208,9 +2221,11 @@ body {
   0% {
     transform: translate(-50%, -96%) translateY(0);
   }
+
   50% {
     transform: translate(-50%, -96%) translateY(-1.5px);
   }
+
   100% {
     transform: translate(-50%, -96%) translateY(1px);
   }
@@ -2221,6 +2236,7 @@ body {
     transform: translateX(-50%) scaleX(0.85);
     opacity: 0.5;
   }
+
   100% {
     transform: translateX(-50%) scaleX(1.2);
     opacity: 0.9;
@@ -2245,6 +2261,7 @@ body {
     transform: translate(-50%, -50%) scale(0.92);
     opacity: 0.55;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1.18);
     opacity: 0.95;
@@ -2256,18 +2273,22 @@ body {
     transform: scale(0.96, 1.02) rotate(-1.5deg);
     opacity: 0.92;
   }
+
   25% {
     transform: scale(1.03, 0.97) rotate(1deg);
     opacity: 1;
   }
+
   50% {
     transform: scale(0.98, 1.04) rotate(-0.8deg);
     opacity: 0.95;
   }
+
   75% {
     transform: scale(1.04, 0.96) rotate(1.4deg);
     opacity: 1;
   }
+
   100% {
     transform: scale(0.97, 1.01) rotate(-1deg);
     opacity: 0.93;
@@ -2279,10 +2300,12 @@ body {
     transform: scale(0.92);
     opacity: 0.7;
   }
+
   50% {
     transform: scale(1.06);
     opacity: 1;
   }
+
   100% {
     transform: scale(0.95);
     opacity: 0.78;
@@ -2294,6 +2317,7 @@ body {
     box-shadow: 0 0 3px #FF6D00, 0 0 6px #FF3D00;
     transform: scale(0.9);
   }
+
   100% {
     box-shadow: 0 0 6px #FF8F00, 0 0 12px #FF5722;
     transform: scale(1.15);
@@ -2305,6 +2329,7 @@ body {
     transform: scale(0.85);
     opacity: 0.45;
   }
+
   100% {
     transform: scale(1.25);
     opacity: 0.9;
@@ -2447,12 +2472,49 @@ body {
    RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 1024px) {
-  .header-nav .nav-links-list {
-    gap: 20px;
+  /* Header for tablet and split screen */
+  .header-container {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+    max-width: 140px;
+    object-fit: contain;
+  }
+
+  .announcement-left,
+  .announcement-right {
+    display: none;
+  }
+
+  .header-nav {
+    display: none !important;
+  }
+
+  .desktop-only-icon {
+    display: none !important;
+  }
+
+  .mobile-hamburger-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border: none;
+    color: var(--color-kashi-green);
+    cursor: pointer;
+  }
+
+  .header-icons-row {
+    gap: 8px;
   }
 
   .hero-heading {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   .collections-cards-grid {
@@ -2476,8 +2538,8 @@ body {
   }
 
   .artisan-visual-col {
-    min-height: 380px;
-    height: 380px;
+    min-height: 340px;
+    height: 340px;
   }
 
   .artisan-editorial-col {
@@ -2486,12 +2548,16 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* 1. Header / Navbar */
   .header-container {
-    height: 72px;
+    height: 58px;
+    padding: 0 12px;
   }
 
   .brand-logo-img {
-    height: 56px;
+    height: 36px;
+    max-width: 130px;
+    object-fit: contain;
   }
 
   .announcement-left,
@@ -2500,49 +2566,601 @@ body {
   }
 
   .header-nav {
-    display: none;
+    display: none !important;
+  }
+
+  .desktop-only-icon {
+    display: none !important;
+  }
+
+  .header-icons-row {
+    gap: 6px;
+  }
+
+  .action-icon-btn {
+    width: 32px;
+    height: 32px;
   }
 
   .mobile-hamburger-btn {
-    display: flex;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    color: var(--color-kashi-green);
+    cursor: pointer;
   }
 
+  .header-audio-btn {
+    height: 28px;
+    padding: 0 8px;
+    font-size: 0.68rem;
+    gap: 4px;
+  }
+
+  .mobile-menu-drawer {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .mobile-drawer-divider {
+    height: 1px;
+    background: rgba(214, 154, 66, 0.25);
+    margin: 4px 0;
+  }
+
+  .mobile-secondary-link {
+    font-size: 0.78rem;
+    color: #8C5627 !important;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
+  /* 2. Hero Section Proportional Scaling (Like lascentsuganda.com) */
   .hero-slider-section {
-    min-height: 520px;
+    min-height: unset !important;
+    height: clamp(230px, 60vw, 360px) !important;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
-  .hero-heading {
-    font-size: 2.5rem;
+  .slider-panoramic-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right 25%;
+  }
+
+  .slider-backdrop-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    background: linear-gradient(90deg, rgba(255, 250, 242, 0.75) 0%, rgba(255, 250, 242, 0.45) 55%, rgba(255, 250, 242, 0.08) 100%);
+  }
+
+  /* Hide arrows on mobile so text & art are uncluttered */
+  .slider-nav-btn {
+    display: none !important;
+  }
+
+  .slider-indicators-row {
+    bottom: 8px;
+    gap: 6px;
+  }
+
+  .indicator-dot {
+    width: 16px;
+    height: 4px;
+    border-radius: 99px;
+    background-color: rgba(11, 53, 46, 0.3);
+    border: none;
+  }
+
+  .indicator-dot.active {
+    width: 28px;
+    background-color: var(--color-kashi-green);
+  }
+
+  .hero-editorial-container {
+    padding: 0 14px;
+    width: 100%;
   }
 
   .hero-text-block {
-    padding: 30px 0;
+    padding: 6px 0;
+    max-width: 100%;
+    background: transparent !important;
+    box-shadow: none !important;
   }
 
   .hero-text-block.slide-1 {
     margin-left: 0;
-    padding: 20px 16px;
+    padding: 6px 0;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    margin-bottom: 4px;
+  }
+
+  .hero-heading {
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+    line-height: 1.15;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .hero-heading-line.line-2 {
+    white-space: normal;
+  }
+
+  .hero-description {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    max-width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .btn-explore-collection {
+    padding: 7px 16px;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(11, 53, 46, 0.2);
+  }
+
+  /* 3. Trust Strip - Clean 2-column mobile grid */
+  .exact-trust-strip {
+    padding: 10px 0;
+  }
+
+  .trust-strip-container {
+    padding: 0 12px;
+  }
+
+  .trust-strip-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .trust-col-divider {
+    display: none !important;
+  }
+
+  .trust-strip-col {
+    padding: 4px 2px;
+    gap: 6px;
+  }
+
+  /* 5th item spans across 2 columns so no awkward empty slot */
+  .trust-strip-col:last-child {
+    grid-column: span 2;
+    justify-content: center;
+  }
+
+  .trust-col-badge {
+    width: 28px;
+    height: 28px;
+  }
+
+  .trust-col-badge svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .trust-col-title {
+    font-size: 0.75rem;
+  }
+
+  .trust-col-subtitle {
+    font-size: 0.62rem;
+  }
+
+  /* 4. Collections Section - Wide horizontal cards on mobile (Exactly like Desktop) */
+  .collections-master-section {
+    padding: 34px 0;
+  }
+
+  .collections-header-bar {
+    margin-bottom: 22px;
+  }
+
+  .collections-section-heading {
+    font-size: 1.6rem;
   }
 
   .collections-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr !important;
     gap: 16px;
+    padding: 0 16px;
+    max-width: 480px;
+    margin: 0 auto;
   }
-}
 
-@media (max-width: 640px) {
+  .collection-item-card {
+    display: flex !important;
+    flex-direction: row !important;
+    min-height: 145px !important;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(11, 53, 46, 0.08);
+  }
+
+  .card-details-box {
+    order: 1;
+    flex: 1 1 56% !important;
+    padding: 18px 16px !important;
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start !important;
+    width: auto !important;
+  }
+
+  .card-item-title {
+    font-size: 1.08rem !important;
+    margin-bottom: 4px !important;
+    line-height: 1.25;
+  }
+
+  .card-item-desc {
+    font-size: 0.76rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #556B64;
+  }
+
+  .card-explore-link {
+    font-size: 0.74rem !important;
+    gap: 4px;
+    justify-content: flex-start !important;
+  }
+
+  .card-visual-wrapper {
+    order: 2;
+    flex: 1 1 44% !important;
+    height: auto !important;
+    min-height: 145px !important;
+    width: auto !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Featured Products (Bestsellers) - Handsome full-width luxury cards (Exactly like Desktop) */
+  .exact-featured-section {
+    padding: 36px 0 46px;
+  }
+
+  .featured-header-centered {
+    margin-bottom: 24px;
+  }
+
+  .featured-heading-centered {
+    font-size: 1.75rem;
+  }
+
+  .featured-subheading-centered {
+    font-size: 0.85rem;
+    padding: 0 12px;
+    margin-bottom: 18px;
+  }
+
+  .featured-filter-tabs-row {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 2px 14px 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .featured-filter-tabs-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-category-pill {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
   .featured-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 16px;
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  .exact-product-card {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    background-color: #FAF4EB;
+    width: 100%;
+  }
+
+  .product-visual-box {
+    width: 100% !important;
+    aspect-ratio: 16/11 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product-card-thumb {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-wishlist-btn {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .product-badge-pill {
+    top: 10px;
+    left: 10px;
+    font-size: 0.68rem;
+    padding: 4px 8px;
+  }
+
+  .product-details-content {
+    padding: 18px 20px 22px !important;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .product-title-text {
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+    height: auto !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    color: var(--color-kashi-green);
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+
+  .product-subtitle-text {
+    display: block !important;
+    font-size: 0.8rem !important;
+    color: #5A6964;
+    margin-bottom: 14px !important;
+  }
+
+  .product-price-row {
+    margin-bottom: 16px !important;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .product-price-amount {
+    font-size: 1.18rem !important;
+    font-weight: 700;
+  }
+
+  .product-old-price {
+    font-size: 0.85rem !important;
+  }
+
+  .btn-add-sacred-bag {
+    padding: 13px 18px !important;
+    font-size: 0.76rem !important;
+    letter-spacing: 0.12em !important;
+    gap: 8px !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-add-sacred-bag span {
+    display: inline !important;
+  }
+
+  /* 6. Artisans of Kashi Section */
+  .exact-artisans-section {
+    padding: 26px 0 40px;
+  }
+
+  .exact-artisans-card {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .artisan-visual-col {
+    height: clamp(200px, 48vw, 280px);
+    min-height: unset;
+  }
+
+  .artisan-editorial-col {
+    padding: 18px 14px;
+  }
+
+  .artisan-quote-mark {
+    font-size: 1.8rem;
+  }
+
+  .artisan-quote-text {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* 7. Gift Sanctum Hampers & Concierge Banner */
+  .gift-sanctum-section {
+    padding: 30px 0 46px;
+  }
+
+  .gift-sanctum-section .container {
+    padding: 0 12px;
+  }
+
+  .gift-cards-trio-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .hamper-luxury-card {
+    border-radius: 14px;
+  }
+
+  .hamper-card-media {
+    height: 190px !important;
+  }
+
+  .hamper-card-content {
+    padding: 16px 14px 18px !important;
+  }
+
+  .hamper-title {
+    font-size: 1.28rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.25;
+  }
+
+  .hamper-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hamper-curation-box {
+    padding: 10px 12px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hamper-curation-chips {
+    gap: 6px !important;
+  }
+
+  .curation-chip {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+
+  .hamper-card-footer {
+    padding-top: 12px !important;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hamper-current-price {
+    font-size: 1.3rem !important;
+  }
+
+  .btn-hamper-action {
+    padding: 9px 16px !important;
+    font-size: 0.72rem !important;
+    border-radius: 6px;
+  }
+
+  .gift-concierge-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+    margin: 0 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .concierge-banner-text h3 {
+    font-size: 1.3rem !important;
+    line-height: 1.25;
+    margin-bottom: 8px !important;
+  }
+
+  .concierge-banner-text p {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .btn-concierge-gold {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 12px 18px !important;
+    font-size: 0.76rem !important;
+    border-radius: 8px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-heading-line.line-2 {
-    white-space: normal;
+  .hero-slider-section {
+    height: clamp(210px, 56vw, 280px) !important;
+  }
+
+  .hero-heading {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    display: none;
+  }
+
+  .collections-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    padding: 0 12px;
+  }
+
+  .featured-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 0 12px;
+    max-width: 360px;
   }
 }
 
@@ -2973,7 +3591,8 @@ html {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1; /* Strictly BEHIND text and cards */
+  z-index: 1;
+  /* Strictly BEHIND text and cards */
   display: block;
 }
 
@@ -2982,7 +3601,8 @@ html {
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
-  z-index: 2; /* In FRONT of floating lanterns/canvas */
+  z-index: 2;
+  /* In FRONT of floating lanterns/canvas */
 }
 
 /* Centered Editorial Header (Realistic & Human-Made) */
@@ -3424,12 +4044,10 @@ html {
 .footer-video-emerald-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(5, 26, 20, 0.65) 0%,
-    rgba(5, 26, 20, 0.48) 50%,
-    rgba(4, 18, 14, 0.72) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(5, 26, 20, 0.65) 0%,
+      rgba(5, 26, 20, 0.48) 50%,
+      rgba(4, 18, 14, 0.72) 100%);
   pointer-events: none;
 }
 
@@ -3938,12 +4556,10 @@ html {
 .shop-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 28, 22, 0.48) 0%,
-    rgba(6, 20, 16, 0.38) 50%,
-    rgba(8, 28, 22, 0.58) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(8, 28, 22, 0.48) 0%,
+      rgba(6, 20, 16, 0.38) 50%,
+      rgba(8, 28, 22, 0.58) 100%);
   pointer-events: none;
 }
 
@@ -4815,7 +5431,8 @@ html {
   pointer-events: none;
 }
 
-.collections-bg-video {
+.collections-bg-video,
+.collections-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4827,12 +5444,10 @@ html {
 .collections-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 28, 22, 0.52) 0%,
-    rgba(6, 20, 16, 0.40) 50%,
-    rgba(8, 28, 22, 0.62) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(8, 28, 22, 0.52) 0%,
+      rgba(6, 20, 16, 0.40) 50%,
+      rgba(8, 28, 22, 0.62) 100%);
   pointer-events: none;
 }
 
@@ -6216,4 +6831,55 @@ html {
   .related-cards-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   SACRED AMBIENT AUDIO CONTROLLER (Header Play / Pause Pill)
+   ========================================================================== */
+.header-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 32px;
+  padding: 0 11px;
+  border-radius: 20px;
+  background: rgba(8, 36, 29, 0.05);
+  border: 1px solid rgba(214, 154, 66, 0.45);
+  color: var(--color-kashi-green, #08241D);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+  font-family: var(--font-sans);
+  margin-right: 4px;
+}
+
+.header-audio-btn:hover {
+  background: rgba(214, 154, 66, 0.16);
+  border-color: #D69A42;
+  transform: translateY(-1px);
+}
+
+.header-audio-btn.playing {
+  background: #08241D;
+  border-color: #D69A42;
+  color: #F8D675;
+  box-shadow: 0 2px 8px rgba(214, 154, 66, 0.25);
+}
+
+.header-audio-btn.paused {
+  background: rgba(8, 36, 29, 0.05);
+  border-color: rgba(214, 154, 66, 0.4);
+  color: #08241D;
+}
+
+.header-audio-text {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  /* Audio pill is desktop-only-icon so it hides automatically via existing rule.
+     No extra overrides needed. */
 }

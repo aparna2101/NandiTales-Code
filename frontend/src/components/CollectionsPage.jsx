@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  ShoppingBag, 
-  ArrowRight, 
-  Play, 
-  Pause, 
-  Volume2, 
-  VolumeX, 
-  Check, 
-  Sparkles 
+import {
+  ShoppingBag,
+  ArrowRight,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  Check,
+  Sparkles
 } from 'lucide-react';
 
 // Exact authentic packaging & editorial assets
@@ -23,6 +23,7 @@ import allProductsImg from '../assets/allproduct.png';
 import gangajal100FullImg from '../assets/product100mlfull.png';
 import gangajal500Img from '../assets/product500ml.png';
 import gangajal1LImg from '../assets/product1litre.png';
+import collectionPageBg from '../assets/collectionpagebg.png';
 import collectionVideo from '../assets/collection.mp4';
 import manufacturingVideo from '../assets/manufacturingproductvideo.mp4';
 
@@ -70,24 +71,20 @@ export default function CollectionsPage({ onAddToCart, onNavigateToShop }) {
   return (
     <div className="collections-page-master">
 
-      {/* 1. Header Banner with Living Video Background (collection.mp4) */}
+      {/* 1. Header Banner with collectionpagebg.png Backdrop */}
       <section className="collections-hero-banner">
         <div className="collections-video-bg-layer" aria-hidden="true">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="collections-bg-video"
-          >
-            <source src={collectionVideo} type="video/mp4" />
-          </video>
+          <img
+            src={collectionPageBg}
+            alt="Flagship Collections Living Heritage"
+            className="collections-bg-img"
+          />
           <div className="collections-video-overlay" />
         </div>
 
         <div className="container collections-hero-inner">
           <span className="collections-eyebrow">✦ SACRED REPERTOIRE • KASHI LIVING HERITAGE ✦</span>
-          <h1 className="collections-main-title">Flagship Collections</h1>
+          <h1 className="collections-main-title">Our Collections</h1>
         </div>
       </section>
 
@@ -427,7 +424,7 @@ export default function CollectionsPage({ onAddToCart, onNavigateToShop }) {
         <div className="container">
 
           <div className="collection-editorial-banner reversed">
-            
+
             {/* Content Left */}
             <div className="collection-banner-content">
               <span className="coll-num-badge">COLLECTION IV • CONSECRATED GANGA SNAN</span>
