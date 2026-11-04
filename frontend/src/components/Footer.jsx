@@ -3,9 +3,22 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Heart, MapPin, Mail, P
 import footerVideo from '../assets/footervideo1.mp4';
 import footerLogoRight from '../assets/footerlogorightside.png';
 
-export default function Footer({ onNewsletterSuccess }) {
+export default function Footer({ onNewsletterSuccess, onNavigate }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+
+  const handleNavClick = (e, page, targetHash) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(page, targetHash);
+    } else {
+      if (page === 'about') window.location.hash = '#about';
+      else if (page === 'shop') window.location.hash = '#shop';
+      else if (page === 'collections') window.location.hash = '#collections';
+      else window.location.hash = targetHash || '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +54,7 @@ export default function Footer({ onNewsletterSuccess }) {
           {/* Column 1: Brand Info with Logo on the Left + Image & Text Beside Logo */}
           <div className="footer-compact-brand-col">
             <div className="footer-brand-logo-row">
-              <a href="#" className="footer-left-logo-link" aria-label="Nandi Tales Homepage">
+              <a href="#" className="footer-left-logo-link" aria-label="Nandi Tales Homepage" onClick={(e) => handleNavClick(e, 'home')}>
                 <img
                   src="/about/fullLogo.png"
                   alt="NANDI TALES"
@@ -96,26 +109,30 @@ export default function Footer({ onNewsletterSuccess }) {
             </div>
           </div>
 
-          {/* Column 2: Essential Offerings */}
-          <div className="footer-compact-links-col">
-            <h5 className="compact-col-title">Sacred Offerings</h5>
-            <ul className="compact-links-list">
-              <li><a href="#collections">Temple Incense & Dhoop</a></li>
-              <li><a href="#collections">Pure Bell-Brass Diyas</a></li>
-              <li><a href="#collections">Daily Poojan Essentials</a></li>
-              <li><a href="#gifting">Royal Festive Gift Boxes</a></li>
-            </ul>
-          </div>
+          {/* 2-Column Links Duo (Website Pages & Products) */}
+          <div className="footer-compact-links-duo">
+            {/* Column 2: Sanctum Pages (from Navbar) */}
+            <div className="footer-compact-links-col">
+              <h5 className="compact-col-title">Sanctum Pages</h5>
+              <ul className="compact-links-list">
+                <li><a href="#" onClick={(e) => handleNavClick(e, 'home')}>Home</a></li>
+                <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Shop</a></li>
+                <li><a href="#collections" onClick={(e) => handleNavClick(e, 'collections')}>Collections</a></li>
+                <li><a href="#stories" onClick={(e) => handleNavClick(e, 'home', '#stories')}>Stories</a></li>
+                <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About Us</a></li>
+              </ul>
+            </div>
 
-          {/* Column 3: Brand & Trust */}
-          <div className="footer-compact-links-col">
-            <h5 className="compact-col-title">Heritage & Trust</h5>
-            <ul className="compact-links-list">
-              <li><a href="#about">Our Kashi Heritage</a></li>
-              <li><a href="#artisans">Meet Master Karigars</a></li>
-              <li><a href="#stories">Temple Purity Standards</a></li>
-              <li><a href="#stories">Track Your Order</a></li>
-            </ul>
+            {/* Column 3: Sacred Offerings (Real Website Products) */}
+            <div className="footer-compact-links-col">
+              <h5 className="compact-col-title">Sacred Offerings</h5>
+              <ul className="compact-links-list">
+                <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Incense Sticks</a></li>
+                <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Pure Brass Diyas</a></li>
+                <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Sacred Ganga Jal</a></li>
+                <li><a href="#collections" onClick={(e) => handleNavClick(e, 'collections')}>Curated Gift Sets</a></li>
+              </ul>
+            </div>
           </div>
 
           {/* Column 4: Compact Newsletter */}

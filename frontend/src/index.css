@@ -2595,10 +2595,33 @@ body {
   }
 
   .header-audio-btn {
-    height: 28px;
-    padding: 0 8px;
-    font-size: 0.68rem;
-    gap: 4px;
+    display: inline-flex !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    gap: 0 !important;
+    background: rgba(8, 36, 29, 0.05);
+    border: 1px solid rgba(214, 154, 66, 0.45);
+    color: var(--color-kashi-green);
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .header-audio-btn .header-audio-text {
+    display: none !important;
+  }
+
+  .header-audio-btn.playing {
+    background: #08241D !important;
+    border-color: #D69A42 !important;
+    color: #F8D675 !important;
+    box-shadow: 0 2px 8px rgba(214, 154, 66, 0.25) !important;
+  }
+
+  .header-audio-btn .audio-icon-pulse {
+    animation: sacredAudioPulse 1.8s infinite ease-in-out;
   }
 
   .mobile-menu-drawer {
@@ -2719,14 +2742,19 @@ body {
   }
 
   .btn-explore-collection {
-    padding: 7px 16px;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    gap: 6px;
-    box-shadow: 0 4px 12px rgba(11, 53, 46, 0.2);
+    padding: 6px 14px !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.08em !important;
+    gap: 5px !important;
+    box-shadow: 0 3px 10px rgba(11, 53, 46, 0.2) !important;
   }
 
-  /* 3. Trust Strip - Clean 2-column mobile grid */
+  .btn-explore-collection .explore-arrow {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* 3. Trust Strip - Clean 2-column mobile grid (4 balanced pillars) */
   .exact-trust-strip {
     padding: 10px 0;
   }
@@ -2748,12 +2776,6 @@ body {
   .trust-strip-col {
     padding: 4px 2px;
     gap: 6px;
-  }
-
-  /* 5th item spans across 2 columns so no awkward empty slot */
-  .trust-strip-col:last-child {
-    grid-column: span 2;
-    justify-content: center;
   }
 
   .trust-col-badge {
@@ -4243,6 +4265,10 @@ html {
 }
 
 /* Links Columns */
+.footer-compact-links-duo {
+  display: contents;
+}
+
 .footer-compact-links-col {
   padding: 0;
   border-right: none;
@@ -4446,6 +4472,10 @@ html {
     margin-bottom: 24px;
   }
 
+  .footer-compact-links-duo {
+    display: contents;
+  }
+
   .footer-compact-brand-col,
   .footer-compact-links-col {
     border-right: none;
@@ -4458,6 +4488,35 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .footer-compact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 26px !important;
+  }
+
+  .footer-compact-links-duo {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .compact-col-title {
+    font-size: 1.08rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .compact-links-list {
+    gap: 8px !important;
+  }
+
+  .compact-links-list a {
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
 @media (max-width: 640px) {
   .footer-compact-inner {
     padding-left: 16px;
@@ -4465,14 +4524,50 @@ html {
   }
 
   .footer-compact-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+  }
+
+  .footer-compact-links-duo {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .compact-col-title {
+    font-size: 1.02rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .compact-links-list {
+    gap: 7px !important;
+  }
+
+  .compact-links-list a {
+    font-size: 0.84rem !important;
+    line-height: 1.4 !important;
   }
 
   .footer-compact-bottom-bar {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer-compact-links-duo {
+    gap: 10px !important;
+  }
+
+  .compact-col-title {
+    font-size: 0.95rem !important;
+  }
+
+  .compact-links-list a {
+    font-size: 0.8rem !important;
   }
 }
 
@@ -5372,9 +5467,63 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .shop-toolbar-sticky {
+    position: static !important;
+    top: auto !important;
+    box-shadow: none !important;
+  }
+
   .shop-toolbar-container {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .product-detail-topbar {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* Circular Categories Mobile Optimization (Swipeable stories without clunky arrows) */
+  .circle-nav-btn {
+    display: none !important;
+  }
+
+  .circle-categories-container {
+    padding: 0 10px !important;
+  }
+
+  .circle-categories-track {
+    gap: 14px !important;
+    padding: 6px 4px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .circle-cat-avatar-wrap {
+    width: 74px !important;
+    height: 74px !important;
+  }
+
+  .circle-cat-item {
+    min-width: 78px !important;
+  }
+
+  .circle-all-text {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  .circle-all-icon-wrap svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .circle-cat-title {
+    font-size: 0.72rem !important;
+    margin-top: 6px !important;
+  }
+
+  .circle-cat-sub {
+    font-size: 0.58rem !important;
   }
 }
 
@@ -5385,15 +5534,6 @@ html {
 
   .trust-strip-grid {
     grid-template-columns: 1fr;
-  }
-
-  .circle-cat-avatar-wrap {
-    width: 88px;
-    height: 88px;
-  }
-
-  .circle-cat-item {
-    min-width: 95px;
   }
 
   .shop-controls-right {
@@ -5772,13 +5912,14 @@ html {
 }
 
 .sarnath-duo-img {
-  width: 90px;
-  height: 90px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   background: #FDFBF7;
-  border-radius: 8px;
-  padding: 6px;
+  border-radius: 10px;
+  padding: 8px;
   border: 1px solid rgba(214, 154, 66, 0.2);
+  flex-shrink: 0;
 }
 
 .sarnath-duo-meta {
@@ -6199,7 +6340,19 @@ html {
   .collection-editorial-banner,
   .collection-editorial-banner.reversed {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
+  }
+
+  .collection-banner-media {
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .collection-banner-img {
+    width: 100%;
+    height: clamp(210px, 52vw, 320px) !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 
   .collection-items-subgrid {
@@ -6215,6 +6368,99 @@ html {
   .sarnath-duo-card {
     flex-direction: column;
     text-align: center;
+    padding: 20px 16px;
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  .sarnath-duo-img {
+    width: 100% !important;
+    max-width: 180px !important;
+    height: 180px !important;
+    object-fit: contain !important;
+    padding: 12px !important;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: #FDFBF7;
+  }
+
+  .sarnath-duo-meta h4 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .sarnath-duo-meta p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .sarnath-duo-meta .coll-subitem-bottom {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .sarnath-duo-meta .subitem-price {
+    font-size: 1.15rem;
+  }
+
+  .sarnath-duo-meta .subitem-add-btn {
+    padding: 9px 18px;
+    font-size: 0.82rem;
+  }
+
+  /* Consecrated Ganga Jal Trio Grid Mobile Optimization */
+  .gangajal-subgrid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    max-width: 440px !important;
+    margin: 24px auto 0 !important;
+    padding: 0 12px !important;
+  }
+
+  .gangajal-thumb-wrap {
+    padding: 20px 16px !important;
+  }
+
+  .gangajal-thumb-wrap .coll-subitem-img {
+    height: 220px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .gangajal-subgrid .coll-subitem-card {
+    border-radius: 16px !important;
+    box-shadow: 0 6px 20px rgba(11, 53, 46, 0.08) !important;
+  }
+
+  .gangajal-subgrid .coll-subitem-info {
+    padding: 18px 16px !important;
+  }
+
+  .gangajal-subgrid .coll-subitem-info h4 {
+    font-size: 1.18rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .gangajal-subgrid .coll-subitem-info p {
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .gangajal-subgrid .coll-subitem-bottom {
+    justify-content: space-between !important;
+  }
+
+  .gangajal-subgrid .subitem-price {
+    font-size: 1.15rem !important;
+  }
+
+  .gangajal-subgrid .subitem-add-btn {
+    padding: 9px 20px !important;
+    font-size: 0.84rem !important;
+    border-radius: 8px !important;
   }
 }
 
@@ -6879,7 +7125,13 @@ html {
   line-height: 1;
 }
 
-@media (max-width: 1024px) {
-  /* Audio pill is desktop-only-icon so it hides automatically via existing rule.
-     No extra overrides needed. */
+@keyframes sacredAudioPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
 }

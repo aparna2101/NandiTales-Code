@@ -73,26 +73,6 @@ export default function TrustBar() {
           <circle cx="12" cy="14" r="1.5" fill="currentColor" />
         </svg>
       )
-    },
-    {
-      title: 'Natural Ingredients',
-      subtitle: '100% Pure & Sacred',
-      icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-          {/* Central Stem */}
-          <path d="M12 21.5V5.5" />
-          {/* Top Sacred Tulsi Bud */}
-          <path d="M12 5.5c-.8-1.8-.8-3 0-3.8.8.8.8 2 0 3.8z" />
-          {/* Left Leaf 1 */}
-          <path d="M12 10.5c-2.4-.8-5.2-.3-6.2 1.6-.4 1 .2 2.4 1.8 2.4 2 0 3.4-1.4 4.4-4z" />
-          {/* Right Leaf 1 */}
-          <path d="M12 8.5c2.4-.8 5.2-.3 6.2 1.6.4 1-.2 2.4-1.8 2.4-2 0-3.4-1.4-4.4-4z" />
-          {/* Left Lower Leaf */}
-          <path d="M12 15.5c-2.2-.7-4.6 0-5.4 1.6-.4.9.2 2 1.6 2 1.8 0 3-1.4 3.8-3.6z" />
-          {/* Right Lower Leaf */}
-          <path d="M12 14c2.2-.7 4.6 0 5.4 1.6.4.9-.2 2-1.6 2-1.8 0-3-1.4-3.8-3.6z" />
-        </svg>
-      )
     }
   ];
 

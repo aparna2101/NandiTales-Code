@@ -13,6 +13,8 @@ export default function Navbar({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const audioRef = useRef(null);
+  const hasTriggeredRef = useRef(false);
+  const userMutedRef = useRef(false);
 
   // Maximum allowed duration: strictly 30 seconds
   const MAX_AUDIO_DURATION = 30;
@@ -28,52 +30,65 @@ export default function Navbar({
         audio.pause();
         audio.currentTime = 0;
         setIsAudioPlaying(false);
+        userMutedRef.current = true;
       }
     };
 
     const handleEnded = () => {
       audio.currentTime = 0;
       setIsAudioPlaying(false);
+      userMutedRef.current = true;
     };
 
     audio.addEventListener('timeupdate', handleTimeUpdate);
     audio.addEventListener('ended', handleEnded);
 
-    const startPlayback = () => {
-      audio.play().then(() => {
-        setIsAudioPlaying(true);
+    const tryPlay = () => {
+      if (hasTriggeredRef.current || userMutedRef.current) {
         cleanup();
-      }).catch(() => {
-        // If browser blocks on this specific event, keep listeners active for next scroll/click
-      });
+        return;
+      }
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsAudioPlaying(true);
+            hasTriggeredRef.current = true;
+            cleanup();
+          })
+          .catch(() => {
+            // Keep listeners alive so next touch/scroll/gesture can retry
+          });
+      }
     };
 
     const cleanup = () => {
-      window.removeEventListener('scroll', startPlayback);
-      window.removeEventListener('wheel', startPlayback);
-      window.removeEventListener('touchmove', startPlayback);
-      window.removeEventListener('pointerdown', startPlayback);
-      window.removeEventListener('click', startPlayback);
-      window.removeEventListener('touchstart', startPlayback);
-      window.removeEventListener('keydown', startPlayback);
+      const events = [
+        'scroll', 'wheel', 'touchmove', 'touchstart', 'touchend',
+        'pointerdown', 'pointerup', 'pointermove', 'mousedown', 'click', 'keydown'
+      ];
+      events.forEach(evt => {
+        window.removeEventListener(evt, tryPlay, { capture: true });
+        document.removeEventListener(evt, tryPlay, { capture: true });
+      });
     };
 
-    // Listen for scroll, mouse wheel, touch swipe, tap, or click anywhere on the page
-    window.addEventListener('scroll', startPlayback, { passive: true });
-    window.addEventListener('wheel', startPlayback, { passive: true });
-    window.addEventListener('touchmove', startPlayback, { passive: true });
-    window.addEventListener('pointerdown', startPlayback, { passive: true });
-    window.addEventListener('click', startPlayback, { passive: true });
-    window.addEventListener('touchstart', startPlayback, { passive: true });
-    window.addEventListener('keydown', startPlayback, { passive: true });
+    const events = [
+      'scroll', 'wheel', 'touchmove', 'touchstart', 'touchend',
+      'pointerdown', 'pointerup', 'pointermove', 'mousedown', 'click', 'keydown'
+    ];
+    events.forEach(evt => {
+      window.addEventListener(evt, tryPlay, { capture: true, passive: true });
+      document.addEventListener(evt, tryPlay, { capture: true, passive: true });
+    });
 
-    // Also attempt auto-play 1 second after site opens
-    const timer = setTimeout(() => {
-      startPlayback();
-    }, 1000);
+    // Attempt playback immediately when the website opens
+    tryPlay();
+    const immediateTimer = setTimeout(tryPlay, 100);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(immediateTimer);
       cleanup();
       audio.removeEventListener('timeupdate', handleTimeUpdate);
       audio.removeEventListener('ended', handleEnded);
@@ -81,14 +96,18 @@ export default function Navbar({
   }, []);
 
   const toggleAudio = (e) => {
-    e.stopPropagation();
+    if (e) e.stopPropagation();
     const audio = audioRef.current;
     if (!audio) return;
 
     if (isAudioPlaying) {
       audio.pause();
       setIsAudioPlaying(false);
+      userMutedRef.current = true; // Mark as explicitly stopped: never re-trigger on scroll/touch
+      hasTriggeredRef.current = true;
     } else {
+      userMutedRef.current = false;
+      hasTriggeredRef.current = true;
       if (audio.currentTime >= MAX_AUDIO_DURATION) {
         audio.currentTime = 0;
       }
@@ -235,23 +254,30 @@ export default function Navbar({
 
           {/* Right Action Icons */}
           <div className="header-icons-row">
-            {/* Sacred Sound Toggle — desktop only in header */}
+            {/* Sacred Sound Toggle (Available on both desktop & mobile) */}
             <button
               type="button"
-              className={`header-audio-btn desktop-only-icon ${isAudioPlaying ? 'playing' : 'paused'}`}
+              className={`header-audio-btn ${isAudioPlaying ? 'playing' : 'paused'}`}
               onClick={toggleAudio}
-              title={isAudioPlaying ? "Turn Off Audio" : "Play Audio (30s)"}
-              aria-label={isAudioPlaying ? "Turn Off Audio" : "Play Audio"}
+              title={isAudioPlaying ? "Turn Off Audio" : "Play Sacred Audio (30s)"}
+              aria-label={isAudioPlaying ? "Turn Off Audio" : "Play Sacred Audio"}
             >
-              <audio ref={audioRef} src="/audio.m4a" preload="auto" />
+              <audio 
+                ref={audioRef} 
+                src="/audio.m4a" 
+                preload="auto" 
+                autoPlay 
+                onPlay={() => setIsAudioPlaying(true)}
+                onPause={() => setIsAudioPlaying(false)}
+              />
               {isAudioPlaying ? (
                 <>
-                  <VolumeX size={13} strokeWidth={2.2} />
+                  <Volume2 size={13} strokeWidth={2.2} className="audio-icon-pulse" />
                   <span className="header-audio-text">OFF</span>
                 </>
               ) : (
                 <>
-                  <Play size={11} fill="currentColor" />
+                  <VolumeX size={13} strokeWidth={2.2} />
                   <span className="header-audio-text">PLAY</span>
                 </>
               )}
@@ -320,16 +346,6 @@ export default function Navbar({
             <a href="#stories" onClick={(e) => handleNavClick(e, 'home', '#stories')}>STORIES</a>
             <a href="#about" className={currentPage === 'about' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'about')}>ABOUT</a>
             <a href="#journal" onClick={(e) => handleNavClick(e, 'home', '#journal')}>JOURNAL</a>
-            {/* Sacred Audio Toggle inside drawer for mobile */}
-            <button
-              type="button"
-              className={`drawer-audio-btn ${isAudioPlaying ? 'playing' : ''}`}
-              onClick={(e) => { toggleAudio(e); setMobileMenuOpen(false); }}
-              aria-label={isAudioPlaying ? "Turn Off Audio" : "Play Sacred Audio"}
-            >
-              {isAudioPlaying ? <VolumeX size={15} strokeWidth={2} /> : <Play size={13} fill="currentColor" />}
-              <span>{isAudioPlaying ? 'STOP AUDIO' : '▶ PLAY SACRED MUSIC'}</span>
-            </button>
           </div>
         )}
       </header>

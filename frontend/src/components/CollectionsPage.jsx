@@ -577,29 +577,6 @@ export default function CollectionsPage({ onAddToCart, onNavigateToShop }) {
               muted={isMuted}
               playsInline
             />
-
-            {/* Video Interactive Controls Overlay */}
-            <div className="cinema-controls-bar">
-              <button
-                type="button"
-                className="cinema-control-btn"
-                onClick={handleTogglePlay}
-                aria-label={isPlaying ? 'Pause video' : 'Play video'}
-              >
-                {isPlaying ? <Pause size={18} /> : <Play size={18} />}
-                <span>{isPlaying ? 'Pause Film' : 'Play Film'}</span>
-              </button>
-
-              <button
-                type="button"
-                className="cinema-control-btn"
-                onClick={handleToggleMute}
-                aria-label={isMuted ? 'Unmute audio' : 'Mute audio'}
-              >
-                {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
-                <span>{isMuted ? 'Sound Off' : 'Sound On'}</span>
-              </button>
-            </div>
           </div>
 
         </div>

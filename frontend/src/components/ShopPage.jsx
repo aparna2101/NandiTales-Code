@@ -18,6 +18,7 @@ import sarnathImg from '../assets/sarnathproduct.png';
 import sarnathBackImg from '../assets/sarnathback.png';
 import fullSarnathImg from '../assets/fullsarnathproduct.png';
 import diyaSetImg from '../assets/diyasetproduct.png';
+import diyaSetBoxImg from '../assets/diyasetbox.png';
 import allProductsImg from '../assets/allproduct.png';
 import shopBg from '../assets/shoppagebg.png';
 
@@ -129,21 +130,6 @@ const allProducts = [
     image: assiImg,
     backImage: assiBackImg,
     images: [assiImg, assiBackImg],
-    inStock: true
-  },
-  {
-    id: 'prod-5ghats-box',
-    filterKey: 'all',
-    name: 'The 5 Sacred Ghats Complete Treasury',
-    category: 'sets',
-    categoryLabel: 'Curated Sets',
-    subtitle: 'All 5 Ghats Incense Box Collection (100 Sticks)',
-    description: 'The monumental collection uniting Vishwanath, Manikarnika, Assi, Dashashwamedh, and Tulsi Ghat in a gold-embossed keepsake presentation box.',
-    price: 1190,
-    originalPrice: 1490,
-    discountBadge: '20% OFF',
-    badge: 'Complete Collection',
-    image: allProductsImg,
     inStock: true
   },
   {
@@ -354,7 +340,7 @@ export default function ShopPage({ onAddToCart, onToggleWishlist, wishlistIds = 
       id: 'diyas',
       title: 'BRASS DIYA',
       subtitle: 'Diya Set',
-      image: diyaSetImg,
+      image: diyaSetBoxImg,
       filterKey: 'diyas'
     }
   ];
@@ -599,7 +585,7 @@ export default function ShopPage({ onAddToCart, onToggleWishlist, wishlistIds = 
                 className={`shop-tab-btn ${selectedFilter === 'sets' ? 'active' : ''}`}
                 onClick={() => setSelectedFilter('sets')}
               >
-                Curated Sets (2)
+                Curated Sets (1)
               </button>
             </div>
 

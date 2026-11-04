@@ -167,7 +167,10 @@ export default function App() {
       </main>
 
       {/* Grand Royal Heritage Footer with Full Arch Logo */}
-      <Footer onNewsletterSuccess={(email) => triggerToast(`Blessings! Subscribed with ${email}`)} />
+      <Footer 
+        onNavigate={navigateTo}
+        onNewsletterSuccess={(email) => triggerToast(`Blessings! Subscribed with ${email}`)} 
+      />
 
       {/* Cart Drawer */}
       <CartDrawer 
