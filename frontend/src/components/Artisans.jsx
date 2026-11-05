@@ -1,32 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
-import artisanVideo from '../assets/video.mp4';
+import artisanVideo from '../assets/homepageleftvideo.mp4';
 import craftedBg from '../assets/crafted.png';
 
 export default function Artisans({ onOpenArtisanModal }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <section id="artisans" className="exact-artisans-section">
       <div className="artisans-full-container">
         <div className="exact-artisans-card">
           
-          {/* Left: Expanded Cinematic Artisan Video (Clean, no text) */}
+          {/* Left: Expanded Cinematic Artisan Video */}
           <div className="artisan-visual-col">
             <video 
+              ref={videoRef}
               autoPlay 
               loop 
               muted 
               playsInline 
               className="artisan-banner-photo"
-              poster="/images/artisan_hands_hd.jpg"
-            >
-              <source src={artisanVideo} type="video/mp4" />
-              <img 
-                src="/images/artisan_hands_hd.jpg" 
-                alt="Hands of Varanasi master artisan engraving a sacred brass vessel in traditional Kashi workshop" 
-                className="artisan-banner-photo"
-                loading="lazy"
-              />
-            </video>
+              src={artisanVideo}
+            />
           </div>
 
           {/* Right: Editorial & Sacred Story */}

@@ -11,7 +11,7 @@ export default function DevoteeReviews() {
       offering: 'Vishwanath Incense & Kamakshi Diya',
       rating: 5,
       date: 'Aswina Purnima, 2026',
-      quote: 'The moment we lit the Vishwanath incense in our puja room, the sanctified aroma transported our family directly to the morning aarti at Kashi Vishwanath. The bell-metal brass diya has a resonant acoustic bell ring that sings when struck. Pure divine devotion.'
+      quote: 'The moment we lit the Vishwanath incense in our puja room, the sanctified aroma transported our family directly to the morning aarti at Kashi Vishwanath. The handcrafted pure brass diya has a radiant warm glow that burns for hours. Pure divine devotion.'
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ export default function DevoteeReviews() {
       offering: 'Vedic Griha Pravesh Poojan Box',
       rating: 5,
       date: 'Shardiya Navratri, 2026',
-      quote: 'We ordered 35 gift hampers for our new home consecration ceremony. Every single relative called us praising the gold foil box and handwritten blessings. The natural chandan dhoop contains zero charcoal—just pure flower petals and sacred herbs.'
+      quote: 'We ordered 35 gift hampers for our new home consecration ceremony. Every single relative called us praising the gold foil box and handwritten blessings. The natural chandan dhoop contains zero charcoal, just pure flower petals and sacred herbs.'
     }
   ];
 
@@ -118,7 +118,7 @@ export default function DevoteeReviews() {
           <div className="trust-badge-item">
             <ShieldCheck size={20} className="gold-icon" />
             <div>
-              <strong>100% Bell-Metal & Pure Herbs</strong>
+              <strong>100% Pure Brass & Organic Herbs</strong>
               <span>Zero chemical fillers, zero synthetic charcoal</span>
             </div>
           </div>

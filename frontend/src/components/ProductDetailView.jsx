@@ -259,7 +259,7 @@ export default function ProductDetailView({
                   {product.category === 'gangajal' 
                     ? '100% pure & authentic sacred holy water from Kashi ghats'
                     : (product.category === 'diyas' 
-                        ? 'Pure bell-metal brass (Kansa), hand-hammered'
+                        ? '100% Pure Brass, Solid Cast & Hand-Hammered'
                         : '100% charcoal-free, made from offered temple flowers')}
                 </span>
               </div>

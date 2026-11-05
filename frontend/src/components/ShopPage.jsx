@@ -73,7 +73,7 @@ const allProducts = [
     category: 'diyas',
     categoryLabel: 'Brass & Poojan',
     subtitle: 'Pure Bell Brass (Kansa) | Hand-Hammered',
-    description: 'A set of 4 solid bell-metal brass lotus diyas forged by master generational artisans in Thatheri Bazaar. Deep oil reservoir with resonant ring.',
+    description: 'A set of 4 solid pure brass lotus diyas forged by master generational artisans in Thatheri Bazaar. Deep oil reservoir for long-burning rituals.',
     price: 890,
     originalPrice: 1190,
     discountBadge: '25% OFF',
@@ -407,7 +407,7 @@ export default function ShopPage({ onAddToCart, onToggleWishlist, wishlistIds = 
         </div>
 
         <div className="container shop-hero-inner">
-          <span className="shop-eyebrow">✦ CONSECRATED IN KASHI ✦</span>
+          <span className="shop-eyebrow">✦ काशीतः प्रतिष्ठितम् ✦</span>
           <h1 className="shop-main-title">The Sanctum Shop</h1>
         </div>
       </section>

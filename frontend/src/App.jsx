@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import AboutPage from './components/AboutPage';
 import ShopPage from './components/ShopPage';
 import CollectionsPage from './components/CollectionsPage';
+import GiftingPage from './components/GiftingPage';
 
 import CartDrawer from './components/CartDrawer';
 import QuickViewModal from './components/QuickViewModal';
@@ -33,6 +34,8 @@ export default function App() {
         setCurrentPage('about');
       } else if (hash === '#shop' || hash.startsWith('#shop')) {
         setCurrentPage('shop');
+      } else if (hash === '#gifting' || hash.startsWith('#gifting')) {
+        setCurrentPage('gifting');
       } else if (
         hash.startsWith('#collections') || 
         hash === '#ghats-series' || 
@@ -40,8 +43,14 @@ export default function App() {
         hash === '#brass-guilds'
       ) {
         setCurrentPage('collections');
-      } else if (hash === '' || hash === '#') {
+      } else if (hash === '' || hash === '#' || hash === '#stories') {
         setCurrentPage('home');
+        if (hash === '#stories') {
+          setTimeout(() => {
+            const el = document.querySelector(hash);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
       }
     };
     handleHashSync();
@@ -55,6 +64,8 @@ export default function App() {
       window.location.hash = '#about';
     } else if (page === 'shop') {
       window.location.hash = '#shop';
+    } else if (page === 'gifting') {
+      window.location.hash = '#gifting';
     } else if (page === 'collections') {
       window.location.hash = targetHash || '#collections';
     } else {
@@ -120,6 +131,16 @@ export default function App() {
               triggerToast(`Added ${item.name} to Sacred Bag!`);
             }}
             onNavigateToShop={() => navigateTo('shop')}
+          />
+        )}
+
+        {currentPage === 'gifting' && (
+          <GiftingPage 
+            onAddToCart={(item) => {
+              setCartCount(prev => prev + 1);
+              triggerToast(`Added ${item.name} to Sacred Bag!`);
+            }}
+            onExploreShop={() => navigateTo('shop')}
           />
         )}
 

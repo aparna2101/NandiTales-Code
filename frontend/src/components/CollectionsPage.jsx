@@ -101,7 +101,7 @@ export default function CollectionsPage({ onAddToCart, onNavigateToShop }) {
               <img
                 src={allProductsImg}
                 alt="The 5 Sacred Ghats Complete Treasury Collection"
-                className="collection-banner-img"
+                className="collection-banner-img five-ghats-banner-img"
               />
               <span className="collection-flagship-tag">FLAGSHIP INCENSE SERIES</span>
             </div>
@@ -369,16 +369,16 @@ export default function CollectionsPage({ onAddToCart, onNavigateToShop }) {
             <div className="collection-banner-content">
               <span className="coll-num-badge">COLLECTION III • LIVING METALLURGY</span>
               <h2 className="coll-heading">Thatheri Brass Guilds</h2>
-              <div className="coll-sanskrit-line">कांस्यं पवित्रं पापनाशनम् (Pure Bell Metal Sanctity)</div>
+              <div className="coll-sanskrit-line">दीपेन साध्यते सर्वम् (Pure Handcrafted Brass Diya)</div>
 
               <p className="coll-description">
-                In the historic metalworking chowks of Varanasi, 6th-generation Thatheri brass-smiths still forge pure bell-metal brass (Kansa) by hand. Unlike thin stamped sheets, our lotus diyas are solid cast and anvil-hammered to sustain deep flames that burn evenly for hours.
+                In the historic metalworking chowks of Varanasi, 6th-generation Thatheri brass artisans still forge pure brass by hand. Unlike thin stamped sheets, our lotus brass diyas are solid cast and anvil-hammered to sustain deep flames that burn evenly for hours.
               </p>
 
               <div className="coll-highlights-row">
                 <div className="coll-highlight-item">
                   <strong>Material Purity</strong>
-                  <span>Pure 78% Copper & 22% Tin Bell Brass (Zero Zinc)</span>
+                  <span>100% Pure Brass (Solid Cast & Hand-Hammered)</span>
                 </div>
                 <div className="coll-highlight-item">
                   <strong>Packaging</strong>

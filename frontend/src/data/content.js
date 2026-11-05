@@ -52,7 +52,7 @@ export const featuredProductsData = [
     id: 'prod-2',
     name: 'Lotus Brass Diya Set',
     category: 'Brass & Rituals',
-    description: 'Handcrafted pure bell-metal brass lotus diyas forged by hereditary artisans in Kashi.',
+    description: 'Handcrafted pure brass lotus diyas forged by hereditary artisans in Kashi.',
     price: 890,
     originalPrice: 1100,
     rating: 5.0,

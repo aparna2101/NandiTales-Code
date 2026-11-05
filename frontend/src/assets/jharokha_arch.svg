@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <defs>
+    <linearGradient id="archGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E3B972" />
+      <stop offset="50%" stop-color="#BF8A3D" />
+      <stop offset="100%" stop-color="#E8C685" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#633A0D" flood-opacity="0.10" />
+    </filter>
+  </defs>
+  <!-- Alcove Fill -->
+  <path d="M 18,252 L 18,112 A 13 13 0 0 1 33,90 A 15 15 0 0 1 52,70 A 17 17 0 0 1 73,50 A 18 18 0 0 1 92,30 C 95,23 97,16 100,10 C 103,16 105,23 108,30 A 18 18 0 0 1 127,50 A 17 17 0 0 1 148,70 A 15 15 0 0 1 167,90 A 13 13 0 0 1 182,112 L 182,252 Z" fill="#FFFDF8" filter="url(#softShadow)" />
+  <!-- Golden Border Outline -->
+  <path d="M 18,252 L 18,112 A 13 13 0 0 1 33,90 A 15 15 0 0 1 52,70 A 17 17 0 0 1 73,50 A 18 18 0 0 1 92,30 C 95,23 97,16 100,10 C 103,16 105,23 108,30 A 18 18 0 0 1 127,50 A 17 17 0 0 1 148,70 A 15 15 0 0 1 167,90 A 13 13 0 0 1 182,112 L 182,252 Z" fill="none" stroke="url(#archGold)" stroke-width="2.2" stroke-linejoin="round" />
+</svg>
+

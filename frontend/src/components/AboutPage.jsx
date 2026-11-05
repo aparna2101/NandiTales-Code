@@ -311,7 +311,7 @@ export default function AboutPage({ onNavigateHome, onExploreOfferings }) {
               </div>
               <h4 className="process-step-title">Sourcing</h4>
               <p className="process-step-desc">
-                We choose high-quality natural materials: virgin bell brass, Mysore sandalwood, and sacred temple pushpa.
+                We choose high-quality natural materials: pure temple brass, Mysore sandalwood, and sacred temple pushpa.
               </p>
             </div>
 

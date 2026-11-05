@@ -425,16 +425,19 @@ body {
   z-index: 2;
 }
 
-.slider-panoramic-img {
+.slider-panoramic-img,
+.slider-panoramic-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right 30%;
+  object-position: center 35%;
+  pointer-events: none;
   transform: scale(1.0);
   transition: transform 7s ease-out;
 }
 
-.slider-slide-bg.active .slider-panoramic-img {
+.slider-slide-bg.active .slider-panoramic-img,
+.slider-slide-bg.active .slider-panoramic-video {
   transform: scale(1.04);
 }
 
@@ -4651,40 +4654,54 @@ html {
 .shop-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      rgba(8, 28, 22, 0.48) 0%,
-      rgba(6, 20, 16, 0.38) 50%,
-      rgba(8, 28, 22, 0.58) 100%);
+  background: 
+    radial-gradient(
+      ellipse at center,
+      rgba(6, 26, 20, 0.70) 0%,
+      rgba(8, 28, 22, 0.50) 45%,
+      rgba(6, 20, 16, 0.40) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 28, 22, 0.50) 0%,
+      rgba(6, 20, 16, 0.30) 50%,
+      rgba(8, 28, 22, 0.60) 100%
+    );
   pointer-events: none;
 }
 
 .shop-hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
+  padding: 16px 28px;
+  border-radius: 20px;
 }
 
 .shop-eyebrow {
   display: inline-block;
-  font-size: 0.78rem;
+  font-family: var(--font-serif, "Cinzel", "Playfair Display", Georgia, serif);
+  font-size: clamp(0.86rem, 1.1vw, 1.05rem);
   font-weight: 700;
-  letter-spacing: 0.28em;
-  color: #F5D061;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  letter-spacing: 0.24em;
+  color: #F8D675;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.85);
 }
 
 .shop-main-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif, "Playfair Display", "Cinzel", Georgia, serif);
   font-size: clamp(2.5rem, 4.4vw, 3.8rem);
   font-weight: 600;
   color: #FFFDF8;
   line-height: 1.15;
   margin-bottom: 0;
-  letter-spacing: 0.01em;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.02em;
+  text-shadow: 
+    0 4px 18px rgba(0, 0, 0, 0.98), 
+    0 2px 6px rgba(0, 0, 0, 0.95), 
+    0 0 35px rgba(0, 0, 0, 0.85);
 }
 
 .shop-subtitle {
@@ -5700,6 +5717,10 @@ html {
   transition: transform 0.5s ease;
 }
 
+.collection-banner-img.five-ghats-banner-img {
+  object-position: 85% center;
+}
+
 .collection-banner-media:hover .collection-banner-img {
   transform: scale(1.03);
 }
@@ -6353,6 +6374,10 @@ html {
     height: clamp(210px, 52vw, 320px) !important;
     object-fit: cover !important;
     object-position: center !important;
+  }
+
+  .collection-banner-img.five-ghats-banner-img {
+    object-position: 85% center !important;
   }
 
   .collection-items-subgrid {

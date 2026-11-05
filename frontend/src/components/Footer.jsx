@@ -130,7 +130,7 @@ export default function Footer({ onNewsletterSuccess, onNavigate }) {
                 <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Incense Sticks</a></li>
                 <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Pure Brass Diyas</a></li>
                 <li><a href="#shop" onClick={(e) => handleNavClick(e, 'shop')}>Sacred Ganga Jal</a></li>
-                <li><a href="#collections" onClick={(e) => handleNavClick(e, 'collections')}>Curated Gift Sets</a></li>
+                <li><a href="#gifting" onClick={(e) => handleNavClick(e, 'gifting')}>Curated Gift Sets</a></li>
               </ul>
             </div>
           </div>

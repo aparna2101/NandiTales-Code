@@ -163,7 +163,7 @@ export default function QuickViewModal({ product, isOpen, onClose, onAddToCart }
               }}
             >
               <ShoppingBag size={16} />
-              <span>ADD TO SACRED BAG — ₹{product.price.toLocaleString('en-IN')}</span>
+              <span>ADD TO SACRED BAG • ₹{product.price.toLocaleString('en-IN')}</span>
             </button>
           </div>
 

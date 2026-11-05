@@ -1,0 +1,1486 @@
+/* ==========================================================================
+   NANDI TALES — LUXURY VARANASI GIFTING SANCTUM STYLES
+   ========================================================================== */
+
+.gifting-page-master {
+  background-color: var(--color-warm-ivory, #FDFBF7);
+  color: var(--color-charcoal, #1C1917);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. Hero Panoramic Editorial Banner (Exact Reference Template)
+   ========================================================================== */
+.gifting-template-banner-section {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  height: clamp(250px, 22vw, 305px);
+  max-height: 315px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #F4EADA;
+}
+
+.gifting-template-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gifting-template-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gifting-template-banner-section:hover .gifting-template-banner-img {
+  transform: scale(1.03);
+}
+
+.gifting-template-banner-overlay {
+  display: none;
+}
+
+.gifting-template-banner-content-wrap {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 45px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.gifting-editorial-card-left,
+.gifting-editorial-card-right {
+  width: max-content;
+  max-width: 580px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Lotus Emblem with Filigree Wing Lines */
+.gifting-lotus-ornament {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+  width: auto;
+}
+
+.ornament-wing-line {
+  height: 1px;
+  width: 44px;
+  background: linear-gradient(90deg, rgba(184, 130, 48, 0), rgba(184, 130, 48, 0.95));
+}
+
+.ornament-wing-line.right {
+  background: linear-gradient(90deg, rgba(184, 130, 48, 0.95), rgba(184, 130, 48, 0));
+}
+
+.lotus-glyph {
+  filter: drop-shadow(0 2px 5px rgba(184, 130, 48, 0.35));
+}
+
+.gifting-headline-main {
+  font-family: var(--font-serif, "Cinzel", "Playfair Display", Georgia, serif);
+  font-size: clamp(2.1rem, 3.2vw, 2.9rem);
+  font-weight: 600;
+  color: #08241D;
+  line-height: 1.15;
+  margin: 2px 0 6px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 2px 10px rgba(255, 255, 255, 0.85);
+}
+
+.gifting-headline-subtitle {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-weight: 500;
+  color: #162E25;
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Explore Gift Collection Pill */
+.gifting-explore-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #FFFDF9;
+  border: 1.5px solid #D4A359;
+  color: #1F1B17;
+  padding: 7px 20px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(200, 148, 67, 0.16);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gifting-explore-action-pill:hover {
+  background: #FAF3E5;
+  border-color: #B88230;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(200, 148, 67, 0.3);
+}
+
+/* Scalloped Wave Divider */
+.gifting-base-scallop-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 24px;
+  z-index: 4;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.gifting-base-scallop-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   2. Sacred Gifting Categories Showcase (Royal Centered Layout)
+   ========================================================================== */
+.gifting-arch-categories-section {
+  position: relative;
+  background: #FAF7F2;
+  padding: 54px 24px 64px;
+  z-index: 5;
+  border-bottom: 1px solid rgba(214, 154, 66, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  overflow-x: hidden;
+}
+
+.gifting-categories-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Centered Header */
+.gifting-cat-header-centered {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gifting-cat-eyebrow {
+  font-family: var(--font-serif, "Cinzel", "Playfair Display", Georgia, serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: #967849;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.gifting-cat-title {
+  font-family: var(--font-serif, "Cinzel", "Playfair Display", Georgia, serif);
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  font-weight: 600;
+  color: #08241D;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  letter-spacing: 0.01em;
+}
+
+/* Centered Lotus Divider */
+.gifting-cat-lotus-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 14px;
+}
+
+.gifting-cat-lotus-glyph {
+  flex-shrink: 0;
+  color: #C89443;
+}
+
+.gifting-cat-gold-diamond {
+  color: #C89443;
+  font-size: 0.52rem;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.gifting-cat-gold-rule {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent 0%, #C89443 50%, transparent 100%);
+}
+
+.gifting-cat-subtitle {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  color: #5A5043;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 580px;
+}
+
+/* 5 Balanced Luxury Showcase Cards Grid */
+.gifting-cat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Individual Luxury Card */
+.gifting-luxury-category-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 163, 89, 0.32);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(100, 60, 20, 0.06);
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gifting-luxury-category-card:hover,
+.gifting-luxury-category-card.is-active,
+.gifting-luxury-category-card:focus-visible {
+  transform: translateY(-8px);
+  border-color: #D4AF37;
+  box-shadow: 
+    0 18px 38px rgba(120, 70, 20, 0.14),
+    0 0 24px rgba(225, 175, 75, 0.22);
+}
+
+/* Top Image Stage Wrapper */
+.cat-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 195px;
+  background: linear-gradient(180deg, #FDFBF7 0%, #F5ECDF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid rgba(212, 163, 89, 0.2);
+}
+
+.cat-card-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(248, 214, 117, 0.35) 0%, rgba(248, 214, 117, 0.05) 60%, transparent 75%);
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gifting-luxury-category-card:hover .cat-card-ambient-glow {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0.95;
+}
+
+.cat-card-product-img {
+  max-width: 82%;
+  max-height: 82%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(60, 35, 10, 0.14));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.gifting-luxury-category-card:hover .cat-card-product-img {
+  transform: scale(1.08) translateY(-4px);
+  filter: drop-shadow(0 14px 24px rgba(60, 35, 10, 0.22));
+}
+
+/* Specific product size balancing */
+.cat-card-product-img.product-cat-gift-boxes {
+  max-width: 84%;
+  max-height: 80%;
+}
+
+.cat-card-product-img.product-cat-pooja-essentials {
+  max-width: 80%;
+  max-height: 76%;
+}
+
+.cat-card-product-img.product-cat-incense-sets {
+  max-width: 74%;
+  max-height: 84%;
+}
+
+.cat-card-product-img.product-cat-gangajal-hampers {
+  max-width: 70%;
+  max-height: 86%;
+}
+
+.cat-card-product-img.product-cat-curated-hampers {
+  max-width: 86%;
+  max-height: 80%;
+}
+
+/* Bottom Information Wrap */
+.cat-card-info-wrap {
+  padding: 18px 16px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.cat-card-name {
+  font-family: var(--font-serif, "Cinzel", "Playfair Display", Georgia, serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #08241D;
+  margin: 0 0 4px;
+  line-height: 1.25;
+  transition: color 0.3s ease;
+}
+
+.gifting-luxury-category-card:hover .cat-card-name {
+  color: #8C6225;
+}
+
+.cat-card-tagline {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #967849;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.cat-card-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #08241D;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+
+.cat-link-icon {
+  color: #C89443;
+  transition: transform 0.3s ease;
+}
+
+.gifting-luxury-category-card:hover .cat-card-arrow-link {
+  color: #B88230;
+}
+
+.gifting-luxury-category-card:hover .cat-link-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive Category Grid & Banner Adjustments */
+@media (max-width: 1200px) {
+  .gifting-cat-cards-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gifting-cat-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gifting-template-banner-section {
+    min-height: 220px;
+    height: auto;
+    padding: 32px 0 36px;
+  }
+
+  .gifting-template-banner-img {
+    object-position: 75% center;
+  }
+
+  .gifting-template-banner-content-wrap {
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+
+  .gifting-editorial-card-left,
+  .gifting-editorial-card-right {
+    max-width: 100%;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .gifting-headline-main {
+    font-size: clamp(1.65rem, 5.2vw, 2.1rem);
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .gifting-headline-subtitle {
+    font-size: 0.88rem;
+    white-space: normal;
+    line-height: 1.45;
+  }
+}
+
+/* Touch-friendly horizontal category glide on mobile (never squished) */
+@media (max-width: 768px) {
+  .gifting-arch-categories-section {
+    padding: 36px 16px 42px;
+  }
+
+  .gifting-cat-header-centered {
+    margin-bottom: 22px;
+  }
+
+  .gifting-cat-title {
+    font-size: 1.85rem;
+  }
+
+  .gifting-cat-subtitle {
+    font-size: 0.86rem;
+  }
+
+  .gifting-cat-cards-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 6px 16px 18px;
+    margin: 0 -16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .gifting-cat-cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gifting-luxury-category-card {
+    flex: 0 0 168px;
+    width: 168px;
+    scroll-snap-align: start;
+    border-radius: 16px;
+  }
+
+  .cat-card-img-wrapper {
+    height: 138px;
+  }
+
+  .cat-card-info-wrap {
+    padding: 12px 8px 14px;
+  }
+
+  .cat-card-name {
+    font-size: 0.94rem;
+    white-space: nowrap;
+  }
+
+  .cat-card-tagline {
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    margin-bottom: 8px;
+  }
+
+  .cat-card-arrow-link {
+    font-size: 0.76rem;
+  }
+}
+
+.gifting-nav-pill-btn.primary {
+  background: #E5A93C;
+  color: #08241D;
+  border-color: #E5A93C;
+  font-weight: 700;
+}
+
+.gifting-nav-pill-btn.primary:hover {
+  background: #FFFDF8;
+  color: #08241D;
+}
+
+/* 2. Occasions of Sanctity (3 Master Bespoke Suites) */
+.gifting-suites-section {
+  padding: 70px 0;
+  position: relative;
+  background: linear-gradient(180deg, #FDFBF7 0%, #FAF5EA 50%, #FDFBF7 100%);
+}
+
+.gifting-section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+  padding: 0 16px;
+}
+
+.gifting-sec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #C07D2B;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.gifting-sec-heading {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+  font-weight: 600;
+  color: var(--color-kashi-green, #08241D);
+  margin: 0 0 12px;
+  line-height: 1.25;
+}
+
+.gifting-sec-sub {
+  font-size: 0.98rem;
+  color: #57534E;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gifting-suites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Asymmetric Suite Card */
+.gifting-suite-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid rgba(214, 154, 66, 0.28);
+  box-shadow: 0 12px 36px rgba(11, 53, 46, 0.06);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gifting-suite-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(11, 53, 46, 0.12);
+  border-color: rgba(214, 154, 66, 0.6);
+}
+
+.gifting-suite-card.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.gifting-suite-card.reverse .suite-media-col {
+  order: 2;
+}
+
+.gifting-suite-card.reverse .suite-content-col {
+  order: 1;
+}
+
+.suite-media-col {
+  position: relative;
+  min-height: 400px;
+  background: #FAF7F0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.suite-real-img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.6s ease;
+}
+
+.gifting-suite-card:hover .suite-real-img {
+  transform: scale(1.03);
+}
+
+.suite-insignia-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(8, 36, 29, 0.88);
+  backdrop-filter: blur(8px);
+  color: #F8D675;
+  border: 1px solid rgba(229, 169, 60, 0.6);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 6px 14px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.suite-content-col {
+  padding: 40px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.suite-provenance {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #C07D2B;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.suite-title {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-weight: 600;
+  color: var(--color-kashi-green, #08241D);
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.suite-summary {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #57534E;
+  margin: 0 0 20px;
+}
+
+/* Contents Box Breakdown */
+.suite-contents-box {
+  background: #FAF7F0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 1px solid rgba(214, 154, 66, 0.2);
+  margin-bottom: 22px;
+}
+
+.contents-box-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #78350F;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contents-items-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 12px;
+}
+
+.contents-items-grid li {
+  font-size: 0.86rem;
+  color: #292524;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  line-height: 1.4;
+}
+
+.contents-items-grid li::before {
+  content: '✦';
+  color: #D69A42;
+  font-size: 0.74rem;
+  flex-shrink: 0;
+}
+
+.suite-packaging-note {
+  font-size: 0.82rem;
+  color: #78716C;
+  line-height: 1.45;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suite-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(214, 154, 66, 0.35);
+  margin-top: auto;
+}
+
+.suite-price-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.suite-price-current {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-kashi-green, #08241D);
+  line-height: 1;
+}
+
+.suite-price-original {
+  font-size: 0.88rem;
+  color: #A8A29E;
+  text-decoration: line-through;
+  margin-top: 4px;
+}
+
+.suite-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--color-kashi-green, #08241D);
+  color: #FFFDF8;
+  border: 1px solid var(--color-kashi-green, #08241D);
+  padding: 13px 26px;
+  border-radius: 99px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(8, 36, 29, 0.18);
+}
+
+.suite-add-btn:hover {
+  background: #E5A93C;
+  color: #08241D;
+  border-color: #E5A93C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 169, 60, 0.35);
+}
+
+.suite-add-btn.added {
+  background: #2E7D32;
+  border-color: #2E7D32;
+  color: #FFFFFF;
+}
+
+/* 3. Consecrated Gift Keepsakes Showcase */
+.gifting-gallery-section {
+  padding: 80px 0 70px;
+  background: #FBF8F2;
+  position: relative;
+  border-top: 1px solid rgba(214, 154, 66, 0.25);
+}
+
+.gallery-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 36px;
+  padding: 0 16px;
+}
+
+.gallery-sec-eyebrow {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #C07D2B;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.gallery-sec-title {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: clamp(2rem, 3.8vw, 2.7rem);
+  font-weight: 600;
+  color: var(--color-kashi-green, #08241D);
+  margin: 0 0 10px;
+}
+
+.gallery-sec-sub {
+  font-size: 0.96rem;
+  color: #57534E;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Occasion Filter Tabs */
+.gifting-filter-tabs-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding: 0 16px;
+}
+
+.gifting-tab-btn {
+  background: #FFFFFF;
+  border: 1px solid rgba(214, 154, 66, 0.35);
+  color: #57534E;
+  padding: 9px 20px;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.gifting-tab-btn:hover {
+  border-color: #E5A93C;
+  color: #08241D;
+  background: #FFFDF8;
+  transform: translateY(-1px);
+}
+
+.gifting-tab-btn.active {
+  background: var(--color-kashi-green, #08241D);
+  color: #F8D675;
+  border-color: var(--color-kashi-green, #08241D);
+  box-shadow: 0 4px 14px rgba(8, 36, 29, 0.18);
+}
+
+/* Keepsakes Grid */
+.gifting-keepsakes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.keepsake-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(214, 154, 66, 0.28);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(11, 53, 46, 0.05);
+}
+
+.keepsake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(11, 53, 46, 0.12);
+  border-color: rgba(214, 154, 66, 0.65);
+}
+
+.keepsake-media-wrap {
+  position: relative;
+  height: 280px;
+  background: #FAF7F0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.keepsake-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.keepsake-card:hover .keepsake-card-img {
+  transform: scale(1.05);
+}
+
+.keepsake-occasion-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(8, 36, 29, 0.9);
+  backdrop-filter: blur(8px);
+  color: #F8D675;
+  border: 1px solid rgba(229, 169, 60, 0.5);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: 99px;
+  text-transform: uppercase;
+}
+
+.keepsake-discount-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #C07D2B;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.06em;
+}
+
+.keepsake-body {
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.keepsake-provenance {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #C07D2B;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.keepsake-title {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: 1.28rem;
+  font-weight: 600;
+  color: var(--color-kashi-green, #08241D);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.keepsake-desc {
+  font-size: 0.86rem;
+  color: #57534E;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.keepsake-items-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.keepsake-item-pill {
+  background: #FAF7F0;
+  border: 1px solid rgba(214, 154, 66, 0.25);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 0.74rem;
+  color: #292524;
+  line-height: 1.3;
+}
+
+.keepsake-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(214, 154, 66, 0.3);
+  margin-top: auto;
+}
+
+.keepsake-price-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.keepsake-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-kashi-green, #08241D);
+  line-height: 1;
+}
+
+.keepsake-mrp {
+  font-size: 0.8rem;
+  color: #A8A29E;
+  text-decoration: line-through;
+  margin-top: 3px;
+}
+
+.keepsake-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--color-kashi-green, #08241D);
+  color: #FFFDF8;
+  border: 1px solid var(--color-kashi-green, #08241D);
+  padding: 10px 18px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.keepsake-add-btn:hover {
+  background: #E5A93C;
+  color: #08241D;
+  border-color: #E5A93C;
+  transform: translateY(-2px);
+}
+
+.keepsake-add-btn.added {
+  background: #2E7D32;
+  border-color: #2E7D32;
+  color: #FFFFFF;
+}
+
+/* Calligraphy & Gift Blessing Note Banner */
+.gifting-blessing-banner {
+  margin-top: 48px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF5EA 100%);
+  border: 1px solid rgba(214, 154, 66, 0.45);
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 6px 20px rgba(11, 53, 46, 0.04);
+}
+
+.blessing-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 650px;
+}
+
+.blessing-banner-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(229, 169, 60, 0.16);
+  color: #C07D2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.blessing-banner-title {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: 1.14rem;
+  color: var(--color-kashi-green, #08241D);
+  margin: 0 0 4px;
+}
+
+.blessing-banner-desc {
+  font-size: 0.86rem;
+  color: #57534E;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.blessing-banner-pill {
+  background: #08241D;
+  color: #F8D675;
+  border-radius: 99px;
+  padding: 8px 18px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 4. The Banaras Packaging Story */
+.gifting-packaging-section {
+  padding: 70px 0;
+  background: #FAF7F0;
+  border-top: 1px solid rgba(214, 154, 66, 0.25);
+  border-bottom: 1px solid rgba(214, 154, 66, 0.25);
+}
+
+.packaging-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.packaging-pillar-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(214, 154, 66, 0.28);
+  border-radius: 18px;
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(100, 60, 20, 0.06);
+  transition: all 0.35s ease;
+}
+
+.packaging-pillar-card:hover {
+  transform: translateY(-5px);
+  border-color: #D4AF37;
+  box-shadow: 0 16px 36px rgba(138, 90, 30, 0.12);
+}
+
+.pillar-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(229, 169, 60, 0.15);
+  color: #B88230;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 14px rgba(229, 169, 60, 0.18);
+}
+
+.unboxing-pillar-title {
+  font-family: var(--font-serif, "Cinzel", "Playfair Display", Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #08241D !important;
+  margin: 0 0 10px;
+  line-height: 1.3;
+  text-shadow: none !important;
+}
+
+.unboxing-pillar-desc {
+  font-family: var(--font-sans, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.86rem;
+  color: #5A5043 !important;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: none !important;
+}
+
+/* 5. Destination Wedding & Corporate Concierge Banner */
+.gifting-concierge-section {
+  padding: 60px 0 80px;
+  background: var(--color-warm-ivory, #FDFBF7);
+}
+
+.concierge-banner-box {
+  background: linear-gradient(135deg, #08241D 0%, #0D3B2E 100%);
+  border: 1px solid rgba(229, 169, 60, 0.4);
+  border-radius: 24px;
+  padding: 50px 48px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+  align-items: center;
+  color: #FFFFFF;
+  box-shadow: 0 16px 40px rgba(8, 36, 29, 0.14);
+}
+
+.concierge-text-side {
+  max-width: 580px;
+}
+
+.concierge-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #E5A93C;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.concierge-title {
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 600;
+  color: #FFFDF8;
+  margin: 0 0 12px;
+  line-height: 1.25;
+}
+
+.concierge-desc {
+  font-size: 0.94rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.concierge-badges-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.concierge-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(229, 169, 60, 0.35);
+  border-radius: 99px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  color: #F8D675;
+}
+
+.concierge-action-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 26, 20, 0.45);
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(214, 154, 66, 0.25);
+}
+
+.concierge-whatsapp-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #F8D675 0%, #D4AF37 100%);
+  color: #08241D;
+  border: 1px solid #FFE494;
+  border-radius: 99px;
+  padding: 14px 22px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(212, 163, 89, 0.35);
+}
+
+.concierge-whatsapp-btn:hover {
+  background: linear-gradient(135deg, #FFE494 0%, #E5BE50 100%);
+  color: #041410;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 163, 89, 0.5);
+}
+
+.concierge-inquiry-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #FFFDF8;
+  border: 1.5px solid rgba(248, 214, 117, 0.5);
+  border-radius: 99px;
+  padding: 13px 22px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.concierge-inquiry-btn:hover {
+  background: rgba(248, 214, 117, 0.16);
+  color: #F8D675;
+  border-color: #F8D675;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(212, 163, 89, 0.25);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE OPTIMIZATIONS)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .gifting-suite-card,
+  .gifting-suite-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .gifting-suite-card.reverse .suite-media-col {
+    order: 0;
+  }
+
+  .gifting-suite-card.reverse .suite-content-col {
+    order: 0;
+  }
+
+  .suite-media-col {
+    min-height: 280px;
+    padding: 18px;
+  }
+
+  .suite-content-col {
+    padding: 28px 24px;
+  }
+
+  .gifting-keepsakes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .packaging-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .concierge-banner-box {
+    grid-template-columns: 1fr;
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gifting-hero-section {
+    min-height: 340px;
+    height: 360px;
+  }
+
+  .gifting-hero-content {
+    padding: 0 14px;
+  }
+
+  .gifting-hero-desc {
+    font-size: 0.86rem;
+    margin-bottom: 20px;
+  }
+
+  .gifting-nav-pill-btn {
+    padding: 8px 16px;
+    font-size: 0.74rem;
+  }
+
+  .gifting-suites-section {
+    padding: 44px 0;
+  }
+
+  .gifting-suite-card {
+    border-radius: 16px;
+  }
+
+  .suite-media-col {
+    min-height: 240px;
+    padding: 12px;
+  }
+
+  .suite-real-img {
+    max-height: 260px;
+  }
+
+  .suite-content-col {
+    padding: 22px 18px;
+  }
+
+  .contents-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .suite-bottom-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .suite-add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gifting-gallery-section {
+    padding: 46px 0;
+  }
+
+  .gifting-filter-tabs-row {
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+
+  .gifting-tab-btn {
+    padding: 7px 15px;
+    font-size: 0.76rem;
+  }
+
+  .gifting-keepsakes-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .keepsake-media-wrap {
+    height: 230px;
+    padding: 14px;
+  }
+
+  .keepsake-body {
+    padding: 18px 16px;
+  }
+
+  .gifting-blessing-banner {
+    padding: 18px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blessing-banner-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .packaging-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concierge-banner-box {
+    padding: 28px 20px;
+  }
+}
+

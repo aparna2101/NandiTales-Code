@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, User, ShoppingBag, ChevronDown, Menu, X, Heart, Volume2, VolumeX, Play, Pause } from 'lucide-react';
 
-export default function Navbar({ 
-  cartCount = 0, 
-  wishlistCount = 0, 
+export default function Navbar({
+  cartCount = 0,
+  wishlistCount = 0,
   currentPage = 'home',
   onNavigate,
-  onOpenCart, 
-  onOpenSearch, 
-  onOpenWishlist 
+  onOpenCart,
+  onOpenSearch,
+  onOpenWishlist
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -119,7 +119,7 @@ export default function Navbar({
     }
   };
 
-  // Continuous Movable Marquee Ticker Items (Flipkart/Luxury E-Commerce Style)
+  // Continuous Movable Marquee Ticker Items 
   const marqueeItems = [
     { tag: "SACRED OFFERING", text: "Free Pure Brass Diya & Gangajal on orders above ₹1,499" },
     { tag: "TEMPLE PUSHPA", text: "100% Charcoal-Free Incense hand-rolled from sacred Vishwanath flowers" },
@@ -147,7 +147,7 @@ export default function Navbar({
     <>
       {/* Main Navigation Bar */}
       <header className="site-header">
-        
+
         {/* Sleek Movable Marquee Ticker Strip (Flipkart / Luxury Brand Style) */}
         <div className="navbar-marquee-strip">
           <div className="marquee-track">
@@ -177,28 +177,39 @@ export default function Navbar({
 
         {/* Main Header Container */}
         <div className="container header-container">
-          
+
           {/* Authentic NANDI TALES Brand Logo (Transparent) */}
-          <a 
-            href="#" 
-            className="brand-logo-link" 
+          <a
+            href="#"
+            className="brand-logo-link"
             aria-label="Nandi Tales Homepage"
             onClick={(e) => handleNavClick(e, 'home')}
           >
-            <img 
-              src="/images/logoheader.png" 
-              alt="NANDI TALES" 
-              className="brand-logo-img" 
+            <img
+              src="/images/logoheader.png"
+              alt="NANDI TALES"
+              className="brand-logo-img"
             />
           </a>
 
           {/* Desktop Center Menu */}
           <nav className="header-nav">
             <ul className="nav-links-list">
-              {/* 1. Direct SHOP Link (No subcategory dropdown as requested) */}
+              {/* 1. Direct HOME Link */}
               <li className="nav-direct-item">
-                <a 
-                  href="#shop" 
+                <a
+                  href="#"
+                  className={`nav-anchor ${currentPage === 'home' ? 'active-nav-gold' : ''}`}
+                  onClick={(e) => handleNavClick(e, 'home')}
+                >
+                  <span>HOME</span>
+                </a>
+              </li>
+
+              {/* 2. Direct SHOP Link */}
+              <li className="nav-direct-item">
+                <a
+                  href="#shop"
                   className={`nav-anchor ${currentPage === 'shop' ? 'active-nav-gold' : ''}`}
                   onClick={(e) => handleNavClick(e, 'shop')}
                 >
@@ -206,10 +217,10 @@ export default function Navbar({
                 </a>
               </li>
 
-              {/* 2. Direct COLLECTIONS Link (No dropdown) */}
+              {/* 3. Direct COLLECTIONS Link */}
               <li className="nav-direct-item">
-                <a 
-                  href="#collections" 
+                <a
+                  href="#collections"
                   className={`nav-anchor ${currentPage === 'collections' ? 'active-nav-gold' : ''}`}
                   onClick={(e) => handleNavClick(e, 'collections')}
                 >
@@ -217,36 +228,25 @@ export default function Navbar({
                 </a>
               </li>
 
-              {/* 3. STORIES */}
+              {/* 4. GIFTING */}
               <li className="nav-direct-item">
-                <a 
-                  href="#stories" 
-                  className="nav-anchor"
-                  onClick={(e) => handleNavClick(e, 'home', '#stories')}
+                <a
+                  href="#gifting"
+                  className={`nav-anchor ${currentPage === 'gifting' ? 'active-nav-gold' : ''}`}
+                  onClick={(e) => handleNavClick(e, 'gifting')}
                 >
-                  <span>STORIES</span>
+                  <span>GIFTING</span>
                 </a>
               </li>
 
-              {/* 4. Single Direct ABOUT Page Link (No Dropdown) */}
+              {/* 5. OUR STORY (About Page) */}
               <li className="nav-direct-item">
-                <a 
-                  href="#about" 
+                <a
+                  href="#about"
                   className={`nav-anchor ${currentPage === 'about' ? 'active-nav-gold' : ''}`}
                   onClick={(e) => handleNavClick(e, 'about')}
                 >
-                  <span>ABOUT</span>
-                </a>
-              </li>
-
-              {/* 5. JOURNAL */}
-              <li className="nav-direct-item">
-                <a 
-                  href="#journal" 
-                  className="nav-anchor"
-                  onClick={(e) => handleNavClick(e, 'home', '#journal')}
-                >
-                  <span>JOURNAL</span>
+                  <span>OUR STORY</span>
                 </a>
               </li>
             </ul>
@@ -262,11 +262,11 @@ export default function Navbar({
               title={isAudioPlaying ? "Turn Off Audio" : "Play Sacred Audio (30s)"}
               aria-label={isAudioPlaying ? "Turn Off Audio" : "Play Sacred Audio"}
             >
-              <audio 
-                ref={audioRef} 
-                src="/audio.m4a" 
-                preload="auto" 
-                autoPlay 
+              <audio
+                ref={audioRef}
+                src="/audio.m4a"
+                preload="auto"
+                autoPlay
                 onPlay={() => setIsAudioPlaying(true)}
                 onPause={() => setIsAudioPlaying(false)}
               />
@@ -283,19 +283,19 @@ export default function Navbar({
               )}
             </button>
 
-            <button 
-              type="button" 
-              className="action-icon-btn" 
-              onClick={onOpenSearch} 
+            <button
+              type="button"
+              className="action-icon-btn"
+              onClick={onOpenSearch}
               aria-label="Search"
               title="Search Offerings"
             >
               <Search size={18} strokeWidth={1.8} />
             </button>
 
-            <button 
-              type="button" 
-              className="action-icon-btn desktop-only-icon" 
+            <button
+              type="button"
+              className="action-icon-btn desktop-only-icon"
               onClick={onOpenWishlist}
               aria-label="Wishlist"
               title="Saved Items"
@@ -304,9 +304,9 @@ export default function Navbar({
               {wishlistCount > 0 && <span className="icon-badge">{wishlistCount}</span>}
             </button>
 
-            <button 
-              type="button" 
-              className="action-icon-btn desktop-only-icon" 
+            <button
+              type="button"
+              className="action-icon-btn desktop-only-icon"
               aria-label="Account"
               title="Account"
               onClick={() => alert("Welcome to Nandi Tales patron sanctum.")}
@@ -314,10 +314,10 @@ export default function Navbar({
               <User size={18} strokeWidth={1.8} />
             </button>
 
-            <button 
-              type="button" 
-              className="action-icon-btn" 
-              onClick={onOpenCart} 
+            <button
+              type="button"
+              className="action-icon-btn"
+              onClick={onOpenCart}
               aria-label="Shopping Bag"
               title="Shopping Bag"
             >
@@ -326,8 +326,8 @@ export default function Navbar({
             </button>
 
             {/* Mobile Hamburger */}
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="mobile-hamburger-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Menu"
@@ -341,11 +341,11 @@ export default function Navbar({
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
           <div className="mobile-menu-drawer">
+            <a href="#" className={currentPage === 'home' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'home')}>HOME</a>
             <a href="#shop" className={currentPage === 'shop' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'shop')}>SHOP</a>
             <a href="#collections" className={currentPage === 'collections' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'collections')}>COLLECTIONS</a>
-            <a href="#stories" onClick={(e) => handleNavClick(e, 'home', '#stories')}>STORIES</a>
-            <a href="#about" className={currentPage === 'about' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'about')}>ABOUT</a>
-            <a href="#journal" onClick={(e) => handleNavClick(e, 'home', '#journal')}>JOURNAL</a>
+            <a href="#gifting" className={currentPage === 'gifting' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'gifting')}>GIFTING</a>
+            <a href="#about" className={currentPage === 'about' ? 'active-mobile-link' : ''} onClick={(e) => handleNavClick(e, 'about')}>OUR STORY</a>
           </div>
         )}
       </header>
